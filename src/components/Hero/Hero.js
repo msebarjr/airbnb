@@ -14,8 +14,7 @@ function Hero() {
                     <p>
                         Enjoy this thoroughly updated home with a large in
                         ground pool for family or friend gatherings looking for
-                        the perfect getaway to south Florida! You'll have
-                        everything you need for a pleasant and comfortable stay.
+                        the perfect getaway to south Florida! 
                     </p>
                     <div className="hero__actions flex">
                         <h3 className="heading">Book Now!</h3>
