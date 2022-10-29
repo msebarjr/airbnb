@@ -1,0 +1,49 @@
+.hero {
+  width: 100%;
+  margin-top: 4rem;
+  display: flex;  
+  justify-content: center;
+}
+
+.hero__photo {
+  width: 600px;
+  height: 600px;
+  background-image: url("https://i.ibb.co/xzSgkHf/living-room-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;  
+  background-position: center center;
+}
+
+.hero__content {
+  width: 635px; 
+  height: max-content;
+  padding: 2rem 4rem;
+  background-color: rgba(220, 220, 220, .8);
+  margin-top: 4rem;
+  margin-left: -5rem;
+}
+
+.hero__content h1 {
+  font-size: 2rem;  
+  text-transform: uppercase;
+}
+
+.hero__content p {
+  margin-top: 1rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.hero__actions {
+  flex-direction: column;  
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.hero__actions h3 {
+  font-size: 1.5rem;  
+}
+
+.hero__actions-btns {
+  gap: 2rem;
+}
