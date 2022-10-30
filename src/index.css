@@ -10,6 +10,8 @@ html, body {
   height: 100vh;
   overflow-x: hidden;
   font-family: 'Work Sans', sans-serif;
+  background-color: #f8f8ff;
+  font-size: 100%;
 }
 
 a, a:visited {
@@ -32,6 +34,10 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.heading {
+  font-family: 'Poppins', sans-serif;;
 }
 
 .btn {  
