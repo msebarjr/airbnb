@@ -8,7 +8,7 @@
   transform-origin: center;  
   transition: all ease-in-out .5s;
   overflow: hidden;
-  
+  position: relative;
 }
 
 .card:hover .card-title {
@@ -72,6 +72,41 @@
   -webkit-transform: translateY(130%);
 }
 
-.title {
-
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(157, 187, 223, .75);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
+
+.card:hover .overlay {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.overlay-text {
+  color: white;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  flex-direction: column;
+  gap: 1em;
+}
+

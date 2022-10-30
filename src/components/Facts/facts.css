@@ -24,7 +24,7 @@
 }
 
 .facts__cards .card:hover {
-  transform: rotateY(360deg);
+  /* transform: rotateY(360deg); */
   opacity: 1;
   background-color: rgba(157, 187, 223, .3);
 }

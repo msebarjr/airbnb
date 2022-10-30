@@ -15,7 +15,12 @@ export const cardData = [
         title: "Baths",
         src: "https://i.ibb.co/xzSgkHf/living-room-1.jpg",
         alt: "Bathroom",
-        info: ["2 Full Bathrooms", "Hair Dryer", "* Towels are provided"],
+        info: [
+            "2 Full Bathrooms",
+            "Shampoo, Conditioner, & Body Soap",
+            "Hair Dryer",
+            "* Towels are provided",
+        ],
     },
     {
         id: 2,
@@ -23,9 +28,11 @@ export const cardData = [
         src: "https://i.ibb.co/xzSgkHf/living-room-1.jpg",
         alt: "Washer & Dryer",
         info: [
+            "Full Kitchen",
+            "Washer & Dryer",
             "Pool",
             `75" HDTV with Hulu & Netflix`,
-            "Electric Fireplace",            
+            "Electric Fireplace",
         ],
     },
 ];
