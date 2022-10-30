@@ -12,7 +12,7 @@
 }
 
 .card:hover .card-title {
-  display: none;
+  /* display: none; */
 }
 
 .card .card-info {  
@@ -84,8 +84,8 @@
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
 }
 
 .card:hover .overlay {
