@@ -16,8 +16,17 @@ function Card({ details }) {
 
         <div className="card flex">
             <div className="card__front"></div>
-            <div className="card-title">
-                <h3>{details.title}</h3>
+            <div className="content flex">
+                <div className="card-title">
+                    <h3>{details.title}</h3>
+                </div>
+                <div className="mobile">
+                    <div className="mobile-text flex">
+                        {details.info.map((fact, idx) => (
+                            <p key={idx}>{fact}</p>
+                        ))}
+                    </div>
+                </div>
             </div>
             <div className="overlay">
                 <div className="overlay-text flex">

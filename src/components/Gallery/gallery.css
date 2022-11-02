@@ -1,0 +1,60 @@
+.gallery_container {
+  width: 100%;
+  margin: 4rem 0;
+  padding: 0 3rem;
+}
+
+.heading  {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  letter-spacing: 2px;  
+}
+
+.top {
+  text-align: right;
+  margin-right: 11rem;
+}
+
+.bottom {
+  margin-left: 11rem;
+}
+
+.gallery {  
+  display: grid;
+  grid-gap: 1em;
+  grid-template-areas: 
+    "smallPhoto1 smallPhoto2 largePhoto"
+    "smallPhoto3 smallPhoto4 largePhoto";
+  grid-template-columns: 25% 25% 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__item--1 {
+  grid-area: smallPhoto1;
+  /* height: 450px; */
+}
+
+.gallery__item--2 {
+  grid-area: smallPhoto2;
+}
+
+.gallery__item--3 {
+  grid-area: smallPhoto3;
+}
+
+.gallery__item--4 {
+  grid-area: smallPhoto4;
+}
+
+.gallery__item--5 {
+  grid-area: largePhoto;
+}
+
+

@@ -1,6 +1,7 @@
 .nav {
   width: 100%;
-  padding: 3rem 0;
+  padding: 1.5rem 0;
+  background-color: rgba(157, 187, 223, .45);
 }
 
 .nav-list {
@@ -8,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .nav-list li:not(.btn) {  
@@ -50,8 +51,36 @@
   background-color: rgba(157, 187, 223, 1);
 }
 
+@media screen and (max-width: 1200px) {
+  .nav {
+    padding-top: .75em;
+    padding-bottom: .75em;
+  }  
+
+  .nav-list {
+    gap: 2rem;
+  }
+}
+
 @media screen and (max-width: 900px) {
-  header {
+  .nav {
+    padding-top: .25em;
+    padding-bottom: .5em;
+  }  
+
+  .nav-list {
+    gap: .25rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-list {
+    gap: .25rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .nav {
     display: none;
   }
 }

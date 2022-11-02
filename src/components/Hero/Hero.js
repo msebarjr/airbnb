@@ -4,7 +4,12 @@ function Hero() {
     return (
         <section>
             <div className="hero" id="hero">
-                <div className="hero__photo"></div>
+                <div className="hero__photo">
+                    <img
+                        src="https://i.ibb.co/6WvN4Fn/front-daytime.jpg"
+                        alt="Font of house"
+                    />
+                </div>
                 <div className="hero__content">
                     <h1 className="heading">
                         Feel at home
@@ -14,7 +19,7 @@ function Hero() {
                     <p>
                         Enjoy this thoroughly updated home with a large in
                         ground pool for family or friend gatherings looking for
-                        the perfect getaway to south Florida! 
+                        the perfect getaway to south Florida!
                     </p>
                     <div className="hero__actions flex">
                         <h3 className="heading">Book Now!</h3>

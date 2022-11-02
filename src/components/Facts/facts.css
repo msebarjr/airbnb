@@ -2,7 +2,9 @@
   margin: 6rem 3rem 0 3rem;
   border: 6px solid rgba(157, 187, 223, .3);
   text-align: center;
-  padding-bottom: 3rem;
+  padding: 0 1rem 3rem 1rem;
+
+  /* width: 100%; */
 }
 
 .facts h2 {
@@ -16,7 +18,7 @@
 }
 
 .facts__cards {  
-  gap: 3rem; 
+  gap: 2rem; 
 }
 
 .facts__cards:hover .card {
@@ -29,5 +31,24 @@
   /* background-color: rgba(157, 187, 223, .3); */
 }
 
+@media screen and (max-width: 1200px) {
+  .facts {
+    border: none;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 8rem;
+  } 
 
+  .facts__cards {
+    gap: 3rem;
+    margin-top: -2rem;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .facts {
+    margin-top: 8rem;
+  }
+}
 
