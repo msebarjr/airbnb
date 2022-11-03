@@ -2,9 +2,10 @@
   margin: 6rem 3rem 0 3rem;
   border: 6px solid rgba(157, 187, 223, .3);
   text-align: center;
-  padding: 0 1rem 3rem 1rem;
-
+  padding-bottom: 3rem;
+  border-radius: 3px;
   /* width: 100%; */
+  
 }
 
 .facts h2 {
@@ -18,7 +19,8 @@
 }
 
 .facts__cards {  
-  gap: 2rem; 
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 .facts__cards:hover .card {

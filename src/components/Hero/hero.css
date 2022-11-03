@@ -25,6 +25,7 @@
   background-color: rgba(220, 220, 220, .8);
   margin-top: 2rem;
   margin-left: -5rem;
+  border-radius: 3px;
 }
 
 .hero__content h1 {

@@ -2,7 +2,7 @@ export const cardData = [
     {
         id: 0,
         title: "Beds",
-        src: "https://i.ibb.co/Mkt7GmD/bedroom-1-beds.jpg",
+        src: "https://i.ibb.co/YDN98xv/master-bedroom-2.jpg",
         alt: " Master Bedroom",
         info: [
             "Bedroom 1: Queen Bed",
@@ -13,7 +13,7 @@ export const cardData = [
     {
         id: 1,
         title: "Baths",
-        src: "https://i.ibb.co/xzSgkHf/living-room-1.jpg",
+        src: "https://i.ibb.co/b32Zb2B/master-bathroom.jpg",
         alt: "Bathroom",
         info: [
             "2 Full Bathrooms",
@@ -25,14 +25,13 @@ export const cardData = [
     {
         id: 2,
         title: "Amenities",
-        src: "https://i.ibb.co/xzSgkHf/living-room-1.jpg",
+        src: "https://i.ibb.co/7nmymmY/laundry-room.jpg",
         alt: "Washer & Dryer",
-        info: [
-            "Full Kitchen",
-            "Washer & Dryer",
+        info: [           
             "Pool",
             `75" HDTV with Hulu & Netflix`,
             "Electric Fireplace",
+            "Plus more"
         ],
     },
 ];
