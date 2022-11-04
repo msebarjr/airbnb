@@ -8,6 +8,7 @@ function Hero() {
                     <img
                         src="https://i.ibb.co/6WvN4Fn/front-daytime.jpg"
                         alt="Font of house"
+                        loading="lazy"
                     />
                 </div>
                 <div className="hero__content">

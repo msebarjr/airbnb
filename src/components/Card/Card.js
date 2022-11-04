@@ -5,7 +5,7 @@ function Card({ details }) {
         <>
             <div className="card">
                 <div className="card-image">
-                    <img src={details.src} alt={details.alt} />
+                    <img src={details.src} alt={details.alt} loading="lazy"/>
                 </div>
                 <div className="card-content">
                     <div className="title">
@@ -21,7 +21,7 @@ function Card({ details }) {
             <div className="mobile">
                 <div className="card-mobile">
                     <div className="card-image-mobile">
-                        <img src={details.src} alt={details.alt} />
+                        <img src={details.src} alt={details.alt} loading="lazy"/>
                     </div>
                     <div className="card-content-mobile flex">
                         <div className="title">
