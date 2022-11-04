@@ -5,7 +5,7 @@ import Card from "../Card/Card";
 
 function Facts() {
     return (
-        <section>
+        <section>            
             <div className="facts" id="amenities">
                 <h2>Quick Facts</h2>
                 <div className="facts__cards flex">
