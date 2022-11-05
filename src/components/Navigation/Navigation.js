@@ -25,7 +25,7 @@ function Navigation() {
                     </li>
                     <li className="btn btn-secondary btn-nav">
                         <a
-                            href="https://www.airbnb.com/rooms/713005677961026083?source_impression_id=p3_1666723558_WpbulLl7Yf2OCCX1"
+                            href="https://t.vrbo.io/QyjtnSNGwub"
                             target="_blank"
                             rel="noreferrer"
                         >

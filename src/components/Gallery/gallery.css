@@ -1,7 +1,6 @@
 .gallery_container {
   width: 100%;
   margin: 4rem 0;
-  padding: 0 3rem;
 }
 
 .heading  {
@@ -13,20 +12,31 @@
 
 .top {
   text-align: right;
-  margin-right: 11rem;
+  margin-bottom: 1rem;
 }
 
 .bottom {
-  margin-left: 11rem;
+  margin-top: 1rem;
 }
 
 .gallery {  
   display: grid;
   grid-gap: 1em;
+  width: 100%;
   grid-template-areas: 
     "smallPhoto1 smallPhoto2 largePhoto"
     "smallPhoto3 smallPhoto4 largePhoto";
   grid-template-columns: 25% 25% 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.gallery-bottom {  
+  display: grid;
+  grid-gap: 1em;
+  grid-template-areas: 
+    "largePhoto smallPhoto1 smallPhoto2"
+    "largePhoto smallPhoto3 smallPhoto4";
+  grid-template-columns: 1fr 25% 25%;
   grid-template-rows: repeat(2, 1fr);
 }
 
@@ -36,25 +46,79 @@
   object-fit: cover;
 }
 
-.gallery__item--1 {
+.gallery__item--1, .gallery__item--4a {
   grid-area: smallPhoto1;
-  /* height: 450px; */
 }
 
-.gallery__item--2 {
+.gallery__item--2, .gallery__item--3a {
   grid-area: smallPhoto2;
 }
 
-.gallery__item--3 {
+.gallery__item--3, .gallery__item--2a {
   grid-area: smallPhoto3;
 }
 
-.gallery__item--4 {
+.gallery__item--4, .gallery__item--5a {
   grid-area: smallPhoto4;
 }
 
-.gallery__item--5 {
+.gallery__item--5, .gallery__item--1a {
   grid-area: largePhoto;
 }
 
+@media screen and (max-width: 800px) {
+  .gallery_container {    
+    text-align: center;
+  }
+  
+  .gallery {      
+    grid-template-areas: 
+      "largePhoto largePhoto largePhoto largePhoto largePhoto largePhoto"
+      "largePhoto largePhoto largePhoto largePhoto largePhoto largePhoto"
+      "smallPhoto1 smallPhoto1 smallPhoto1 smallPhoto2 smallPhoto2 smallPhoto2"
+      "smallPhoto3 smallPhoto3 smallPhoto3 smallPhoto4 smallPhoto4 smallPhoto4";       
+      grid-template-columns: repeat(6, 1fr);
+  }
 
+  .gallery-bottom {      
+    grid-template-areas: 
+      "largePhoto largePhoto largePhoto largePhoto largePhoto largePhoto"
+      "largePhoto largePhoto largePhoto largePhoto largePhoto largePhoto"
+      "smallPhoto3 smallPhoto3 smallPhoto3 smallPhoto4 smallPhoto4 smallPhoto4"
+      "smallPhoto1 smallPhoto1 smallPhoto1 smallPhoto2 smallPhoto2 smallPhoto2";       
+      grid-template-columns: repeat(6, 1fr);
+  }
+
+  .top, .bottom {
+     display: none;
+  }  
+}
+
+@media screen and (max-width: 500px) {  
+  .gallery_container {
+    padding: 0;
+  }
+
+  .gallery-bottom {
+    margin-top: -3rem;
+  }
+  
+  .gallery, .gallery-bottom {     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;     
+  } 
+
+  .gallery figure, .gallery-bottom figure {
+    width: 90%;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 300px) {  
+  .gallery figure, .gallery-bottom figure  {
+    width: 90%;
+    height: 200px;
+  }
+}

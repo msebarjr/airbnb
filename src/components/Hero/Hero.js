@@ -1,15 +1,13 @@
 import "./hero.css";
 
+import House from "../../assets/front_daytime.jpg";
+
 function Hero() {
     return (
         <section>
             <div className="hero" id="hero">
                 <div className="hero__photo">
-                    <img
-                        src="https://i.ibb.co/6WvN4Fn/front-daytime.jpg"
-                        alt="Font of house"
-                        loading="lazy"
-                    />
+                    <img src={House} alt="Font of house" loading="lazy" />
                 </div>
                 <div className="hero__content">
                     <h1 className="heading">
@@ -36,7 +34,7 @@ function Hero() {
                             </div>
                             <div className="btn btn-secondary">
                                 <a
-                                    href="https://www.airbnb.com/rooms/713005677961026083?source_impression_id=p3_1666723558_WpbulLl7Yf2OCCX1"
+                                    href="https://t.vrbo.io/QyjtnSNGwub"
                                     target="_blank"
                                     rel="noreferrer"
                                 >
