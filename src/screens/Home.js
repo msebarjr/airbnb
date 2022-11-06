@@ -1,3 +1,4 @@
+import Contact from "../components/Contact/Contact";
 import Facts from "../components/Facts/Facts";
 import Gallery from "../components/Gallery/Gallery";
 import Hero from "../components/Hero/Hero";
@@ -11,6 +12,7 @@ function Home() {
                 <Facts />
                 <Gallery />
                 <Reserve />
+                <Contact />
             </main>
         </div>
     );
