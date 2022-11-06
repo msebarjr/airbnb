@@ -1,5 +1,5 @@
 import { useState } from "react";
-import FsLightbox from "fslightbox-react";
+
 
 import "./gallery.css";
 import { galleryData } from "../../api/galleryData";
@@ -168,30 +168,7 @@ function Gallery() {
                     <h2 className="heading bottom">Comfy Beds</h2>
                 </div>
             </section>
-            <FsLightbox
-                toggler={lightboxController}
-                // types={[...new Array(images.length).fill("image")]}
-                sources={[
-                    "../assets/bedroom_1_alt.jpg",
-                    "../../assets/bedroom_1_beds.jpg",
-                    "../../assets/bedroom_2_beds.jpg",
-                    "../../assets/front_daytime.jpg",
-                    "../../assets/front_nighttime.jpg",
-                    "../../assets/guest_bathroom.jpg",
-                    "../../assets/kitchen_appliances.jpg",
-                    "../../assets/kitchen_bar_2.jpg",
-                    "../../assets/kitchen_bar.jpg",
-                    "../../assets/kitchen.jpg",
-                    "../../assets/laundry_room.jpg",
-                    "../../assets/living_room_1.jpg",
-                    "../../assets/living_room_2.jpg",
-                    "../../assets/master_bedroom.jpg",
-                    "../../assets/master_bathroom_2.jpg",
-                    "../../assets/pool_daytime.jpg",
-                    "../../assets/pool_nighttime.jpg",
-                    "../../assets/pool_seating.jpg",
-                ]}
-            />
+            
         </>
     );
 }
