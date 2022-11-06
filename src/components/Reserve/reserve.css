@@ -1,0 +1,28 @@
+.reserve {
+  margin: 6rem 0 0 0;
+  border: 6px solid rgba(157, 187, 223, .3);
+  text-align: center;
+  padding-bottom: 4.5rem;
+  border-radius: 3px; 
+  margin-bottom: 4rem;
+}
+
+.reserve h2{
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  background-color: #f8f8ff;
+  transform: translateY(-50%);
+  padding: 0 3rem;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.reserve .actions {
+  gap: 4rem;
+  margin-top: 1rem;
+}
+
+.reserve .actions button {
+  padding: 2em 2.5em;
+  width: 250px;
+}
