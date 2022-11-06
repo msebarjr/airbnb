@@ -77,6 +77,10 @@ ul {
   transform: translateY(-7px);
 }
 
+.ReactModal__Overlay--before-close {
+  pointer-events: none;
+}
+
 @media screen and (max-width: 900px) {
   .btn-nav {
     display: none;

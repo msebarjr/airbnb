@@ -1,7 +1,8 @@
 import { useState } from "react";
-
+import FsLightbox from "fslightbox-react";
 
 import "./gallery.css";
+
 import { galleryData } from "../../api/galleryData";
 
 import Bedroom_1 from "../../assets/bedroom_1_beds.jpg";
@@ -16,35 +17,19 @@ import Living_Room_1 from "../../assets/living_room_1.jpg";
 import Spare_Room from "../../assets/bedroom_2_beds.jpg";
 
 function Gallery() {
-    // const images = galleryData.map((image) => image.image);
+    const images = galleryData.map((image) => image.image);
 
-    const images = [
-        "../../assets/bedroom_1_alt.jpg",
-        "../../assets/bedroom_1_beds.jpg",
-        "../../assets/bedroom_2_beds.jpg",
-        "../../assets/front_daytime.jpg",
-        "../../assets/front_nighttime.jpg",
-        "../../assets/guest_bathroom.jpg",
-        "../../assets/kitchen_appliances.jpg",
-        "../../assets/kitchen_bar_2.jpg",
-        "../../assets/kitchen_bar.jpg",
-        "../../assets/kitchen.jpg",
-        "../../assets/laundry_room.jpg",
-        "../../assets/living_room_1.jpg",
-        "../../assets/living_room_2.jpg",
-        "../../assets/master_bedroom.jpg",
-        "../../assets/master_bathroom_2.jpg",
-        "../../assets/pool_daytime.jpg",
-        "../../assets/pool_nighttime.jpg",
-        "../../assets/pool_seating.jpg",
-    ];
+    const [isSliderOpen, setIsSliderOpen] = useState({
+        slide: 1,
+        isOpen: false,
+    });
 
-    const imageComp = galleryData.map((image) => image.image);
-
-    const [lightboxController, setLightboxController] = useState(false);
-
-    const openLightboxOnSlide = () => {
-        setLightboxController(!lightboxController);
+    const openSliderHandler = (index) => {
+        setIsSliderOpen((prevState) => ({
+            ...prevState,
+            slide: index,
+            isOpen: !prevState.isOpen,
+        }));
     };
 
     return (
@@ -57,7 +42,7 @@ function Gallery() {
                     <div className="gallery">
                         <figure
                             className="gallery__item--1"
-                            onClick={openLightboxOnSlide}
+                            onClick={() => openSliderHandler(7)}
                         >
                             <img
                                 src={Kitchen_Appliances}
@@ -68,7 +53,7 @@ function Gallery() {
                         </figure>
                         <figure
                             className="gallery__item--2"
-                            onClick={openLightboxOnSlide}
+                            onClick={() => openSliderHandler(8)}
                         >
                             <img
                                 src={Bar}
@@ -79,7 +64,7 @@ function Gallery() {
                         </figure>
                         <figure
                             className="gallery__item--3 "
-                            onClick={openLightboxOnSlide}
+                            onClick={() => openSliderHandler(18)}
                         >
                             <img
                                 src={Seating}
@@ -90,7 +75,7 @@ function Gallery() {
                         </figure>
                         <figure
                             className="gallery__item--4"
-                            onClick={openLightboxOnSlide}
+                            onClick={() => openSliderHandler(16)}
                         >
                             <img
                                 src={Pool}
@@ -101,7 +86,7 @@ function Gallery() {
                         </figure>
                         <figure
                             className="gallery__item--5"
-                            onClick={openLightboxOnSlide}
+                            onClick={() => openSliderHandler(10)}
                         >
                             <img
                                 src={Kitchen}
@@ -119,56 +104,71 @@ function Gallery() {
                 <div className="gallery_container">
                     <h2 className="heading top">Spacious Rooms</h2>
                     <div className="gallery-bottom">
-                        <figure className="gallery__item--1a">
+                        <figure
+                            className="gallery__item--1a"
+                            onClick={() => openSliderHandler(14)}
+                        >
                             <img
                                 src={Master}
                                 alt="Master bedroom"
                                 className="gallery__img"
                                 loading="lazy"
-                                onClick={openLightboxOnSlide}
                             />
                         </figure>
-                        <figure className="gallery__item--2a">
+                        <figure
+                            className="gallery__item--2a"
+                            onClick={() => openSliderHandler(2)}
+                        >
                             <img
                                 src={Bedroom_1}
                                 alt="Spare bedroom"
                                 className="gallery__img"
                                 loading="lazy"
-                                onClick={openLightboxOnSlide}
                             />
                         </figure>
-                        <figure className="gallery__item--3a">
+                        <figure
+                            className="gallery__item--3a"
+                            onClick={() => openSliderHandler(13)}
+                        >
                             <img
                                 src={Living_Room_2}
                                 alt="Living room"
                                 className="gallery__img"
                                 loading="lazy"
-                                onClick={openLightboxOnSlide}
                             />
                         </figure>
-                        <figure className="gallery__item--4a">
+                        <figure
+                            className="gallery__item--4a"
+                            onClick={() => openSliderHandler(12)}
+                        >
                             <img
                                 src={Living_Room_1}
                                 alt="Living room"
                                 className="gallery__img"
                                 loading="lazy"
-                                onClick={openLightboxOnSlide}
                             />
                         </figure>
-                        <figure className="gallery__item--5a">
+                        <figure
+                            className="gallery__item--5a"
+                            onClick={() => openSliderHandler(3)}
+                        >
                             <img
                                 src={Spare_Room}
                                 alt="Spare bedroom"
                                 className="gallery__img"
                                 loading="lazy"
-                                onClick={openLightboxOnSlide}
                             />
                         </figure>
                     </div>
                     <h2 className="heading bottom">Comfy Beds</h2>
                 </div>
             </section>
-            
+
+            <FsLightbox
+                toggler={isSliderOpen.isOpen}
+                sources={images}
+                slide={isSliderOpen.slide}
+            />
         </>
     );
 }
