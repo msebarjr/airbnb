@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import Home_Night from "../../assets/front_nighttime.jpg";
+
 import "./contact.css";
 
 function Contact() {
@@ -56,73 +58,82 @@ function Contact() {
     return (
         <section>
             <div className="contact" id="contact">
-                <h2>Contact Us</h2>
                 <div className="contact-wrapper">
-                    <form onSubmit={onSubmitHandler}>
-                        <div className="row">
-                            <div className="form-group">
-                                <label htmlFor="name">
-                                    <span>*</span>Name
+                    <div className="form-wrapper">
+                        <h2>Contact Us</h2>
+                        <form onSubmit={onSubmitHandler}>
+                            <div className="row">
+                                <div className="form-group">
+                                    <label htmlFor="name">
+                                        Name<span>*</span>
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        value={name}
+                                        onChange={inputChangeHandler}
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="subject">Subject</label>
+                                    <input
+                                        type="text"
+                                        name="subject"
+                                        id="subject"
+                                        value={subject}
+                                        onChange={inputChangeHandler}
+                                    />
+                                </div>
+                            </div>
+                            {!formInputValidity.name && (
+                                <p className="error">
+                                    Please provide your name
+                                </p>
+                            )}
+                            <div className="form-group col">
+                                <label htmlFor="email">
+                                    Email<span>*</span>
                                 </label>
                                 <input
                                     type="text"
-                                    name="name"
-                                    id="name"
-                                    value={name}
+                                    name="email"
+                                    id="email"
+                                    value={email}
                                     onChange={inputChangeHandler}
                                 />
-                                {!formInputValidity.name && (
+                                {!formInputValidity.email && (
                                     <p className="error">
-                                        Please provide your name
+                                        Please provide valid email
                                     </p>
                                 )}
                             </div>
-                            <div className="form-group">
-                                <label htmlFor="subject">Subject</label>
-                                <input
-                                    type="text"
-                                    name="subject"
-                                    id="subject"
-                                    value={subject}
+                            <div className="form-group col">
+                                <label htmlFor="message">
+                                    Message<span>*</span>
+                                </label>
+                                <textarea
+                                    cols="30"
+                                    rows="10"
+                                    name="message"
+                                    id="message"
+                                    value={message}
                                     onChange={inputChangeHandler}
-                                />
+                                ></textarea>
                             </div>
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="email">
-                                <span>*</span>Email
-                            </label>
-                            <input
-                                type="text"
-                                name="email"
-                                id="email"
-                                value={email}
-                                onChange={inputChangeHandler}
-                            />
-                            {!formInputValidity.email && (
+                            {!formInputValidity.message && (
                                 <p className="error">
-                                    Please provide valid email
+                                    Please provide a message
                                 </p>
                             )}
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="message">
-                                <span>*</span>Message
-                            </label>
-                            <textarea
-                                cols="30"
-                                rows="10"
-                                name="message"
-                                id="message"
-                                value={message}
-                                onChange={inputChangeHandler}
-                            ></textarea>
-                        </div>
-                        {!formInputValidity.message && (
-                            <p className="error">Please provide a message</p>
-                        )}
-                        <button>Send Message</button>
-                    </form>
+                            <button className="btn btn-primary">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                    <div className="contact-image">
+                        <img src={Home_Night} alt="Front of house at night" />
+                    </div>
                 </div>
             </div>
         </section>
