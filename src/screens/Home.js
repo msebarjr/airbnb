@@ -14,6 +14,7 @@ function Home() {
                 <Reserve />
                 <Contact />
             </main>
+            
         </div>
     );
 }

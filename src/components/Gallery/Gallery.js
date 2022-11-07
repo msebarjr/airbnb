@@ -35,10 +35,8 @@ function Gallery() {
     return (
         <>
             <section>
-                <div className="gallery_container">
-                    <h2 className="heading top" id="gallery">
-                        Full Kitchen
-                    </h2>
+                <div className="gallery_container" id="gallery">
+                    <h2 className="heading top">Full Kitchen</h2>
                     <div className="gallery">
                         <figure
                             className="gallery__item--1"
