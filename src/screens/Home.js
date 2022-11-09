@@ -4,18 +4,21 @@ import Gallery from "../components/Gallery/Gallery";
 import Hero from "../components/Hero/Hero";
 import Reserve from "../components/Reserve/Reserve";
 
-function Home() {
+function Home() {    
     return (
-        <div className="container">
-            <Hero />
-            <main>
-                <Facts />
-                <Gallery />
-                <Reserve />
+        <>
+            <div className="container">
+                <Hero />
+                <main>
+                    <Facts />
+                    <Gallery />
+                </main>
+            </div>
+            <Reserve />
+            <div className="container">
                 <Contact />
-            </main>
-            
-        </div>
+            </div>
+        </>
     );
 }
 

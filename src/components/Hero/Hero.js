@@ -1,13 +1,25 @@
 import "./hero.css";
 
+import useProgressiveImg from "../../hooks/useProgressiveImg";
 import House from "../../assets/front_daytime.jpg";
+import House_Blur from "../../assets/front_daytime_blur.jpg";
 
 function Hero() {
+    const [src, { blur }] = useProgressiveImg(House_Blur, House);
+
     return (
         <section>
             <div className="hero" id="hero">
                 <div className="hero__photo">
-                    <img src={House} alt="Font of house" loading="lazy" />
+                    <img
+                        src={src}
+                        style={{
+                            filter: blur ? "blur(20px)" : "none",
+                            transition: blur ? "none" : "filter 0.3s ease-out",
+                        }}
+                        alt="Front of house"
+                    />
+                    {/* <img src={House} alt="Font of house" loading="lazy" /> */}
                 </div>
                 <div className="hero__content">
                     <h1 className="heading">
@@ -50,3 +62,17 @@ function Hero() {
 }
 
 export default Hero;
+
+// function BlurredUpImage({ tiny, large }) {
+//     const [src, { blur }] = useProgressiveImg(tiny, large);
+
+//     return (
+//         <img
+//             src={src}
+//             style={{              
+//                 filter: blur ? "blur(20px)" : "none",
+//                 transition: blur ? "none" : "filter 0.3s ease-out",
+//             }}
+//         />
+//     );
+// }

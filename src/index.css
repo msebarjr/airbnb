@@ -77,7 +77,7 @@ ul {
   transform: translateY(-7px);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 700px) {
   .btn-nav {
     display: none;
   }  

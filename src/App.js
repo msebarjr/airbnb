@@ -5,9 +5,9 @@ import Home from "./screens/Home";
 function App() {
     return (
         <>
-            <Navigation />
+            <Navigation isHeader={true} />
             <Home />
-            <Footer />
+            <Footer isHeader={false} />
         </>
     );
 }

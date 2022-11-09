@@ -1,5 +1,5 @@
 .facts {
-  margin: 6rem 0 0 0;
+  margin: 8rem 0 0 0;
   border: 6px solid rgba(157, 187, 223, .3);
   text-align: center;
   padding-bottom: 4.5rem;
@@ -19,6 +19,7 @@
 .facts__cards {  
   width: 100%;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 3rem;
 }
@@ -31,6 +32,7 @@
     width: 100%;
   }  
 }
+
 @media screen and (max-width: 1200px) {
   .facts {
     margin-top: 8rem;    
@@ -39,12 +41,19 @@
 
   .facts__cards { 
     margin-top: -2rem;   
-    padding-bottom: 3rem; 
+    padding: 2rem 0;
   }
 
   .facts h2 {
     margin-bottom: 1rem;
   }
+}
+
+@media screen and (max-width: 1000px) {
+  .facts__cards { 
+    /* padding: 0 1rem; */
+    gap: 2rem;
+  } 
 }
 
 @media screen and (max-width: 900px) {
@@ -59,16 +68,22 @@
   }
 }
 
+@media screen and (max-width: 850px) {
+  .facts__cards {
+    flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 650px) {
   .facts {
-    margin-top: 5rem;
-    padding: 0 0 3rem 0;
+    margin-top: 7rem;
+    padding: 0 0 5rem 0;
   }
 }
 
 @media screen and (max-width: 600px) {
   .facts h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     padding: 0 1rem;
   }
 }

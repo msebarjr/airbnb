@@ -1,6 +1,6 @@
 .gallery_container {
-  width: 100%;
-  margin: 4rem 0;
+  width: 95%;
+  margin: 6rem auto 0;
 }
 
 .heading  {
@@ -66,9 +66,18 @@
   grid-area: largePhoto;
 }
 
+@media screen and (max-width: 1250px) {
+  section:nth-child(3) .gallery_container {
+    margin: 4rem auto;
+  }
+}
 @media screen and (max-width: 800px) {
   .gallery_container {    
     text-align: center;
+  }
+
+  section:nth-child(3) .gallery_container {
+    margin-top: 1em;
   }
   
   .gallery {      
@@ -95,6 +104,10 @@
 }
 
 @media screen and (max-width: 500px) {  
+  section:nth-child(3) .gallery_container {
+    margin-top: 4rem;
+  }
+
   .gallery_container {
     padding: 0;
   }
