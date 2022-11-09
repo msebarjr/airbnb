@@ -115,17 +115,17 @@
 
 @media screen and (max-width: 1000px) {
   .card {
-    width: 500px;
-    height: 500px;
+    width: 275px;
+    height: 275px;
   }
 
   .card .card-content {
-    height: 500px;
-    bottom: -500px;
+    height: 275px;
+    bottom: -275px;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .card {
     display: none;
   }

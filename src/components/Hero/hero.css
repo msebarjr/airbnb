@@ -1,6 +1,6 @@
 .hero {
   width: 100%;
-  margin-top: 4rem;
+  margin-top: 8rem;
   display: flex;
   justify-content: center;
 }
@@ -47,7 +47,9 @@
 }
 
 .hero__actions h3 {
-  font-size: 1.5rem;  
+  font-size: 1.5rem;
+  font-weight: bold;  
+  text-transform: uppercase;
 }
 
 .hero__actions-btns {
@@ -61,7 +63,7 @@
 @media screen and (max-width: 1250px) {
   .hero {    
     padding-left: 3rem;    
-    margin: 4rem auto;
+    margin-top: 7rem;
   }
 
   .hero__photo {
@@ -125,6 +127,8 @@
     max-width: 650px;
     text-align: center; 
     transform: translate(0,-30%);
+    padding-top: 2em;
+    padding-bottom: 2em;
   }
 }
 
@@ -141,13 +145,27 @@
   }
 }
 
+@media screen and (max-width: 450px) {
+  .hero__photo img {
+    object-position: 80% center;
+  }
+}
+
 @media screen and (max-width: 400px) {
+  .hero__photo img {
+    object-position: 100% center;
+  }
+
   .hero__actions-btns {
     flex-direction: column;
   }
 }
 
 @media screen and (max-width: 350px) {
+  .hero__photo img {
+   object-position: right center;
+  }
+
   .hero__photo {
     height: 300px;
   }
