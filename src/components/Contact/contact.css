@@ -59,7 +59,9 @@
 
 .row > .form-group {
   flex: 1;
+  height: 111px;
 }
+
 
 .form-group {
   display: flex;
@@ -72,6 +74,7 @@ span, .error {
 
 .error {
   margin-top: 0.5em;
+  font-size: 0.75rem;
 }
 
 span {
@@ -160,12 +163,11 @@ input, textarea {
 
   .contact .form-wrapper form {
     width: 100%;    
-  }
+  } 
 
   .row {
     flex: 1;
     gap: 0;
-
   }
 
   .contact h2 {

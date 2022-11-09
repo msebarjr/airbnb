@@ -30,6 +30,11 @@ function Contact() {
         if (event.target.name === "subject") setSubject(event.target.value);
         if (event.target.name === "email") setEmail(event.target.value);
         if (event.target.name === "message") setMessage(event.target.value);
+
+        console.log({ name });
+        console.log({ subject });
+        console.log({ email });
+        console.log({ message });
     };
 
     const onSubmitHandler = (event) => {
@@ -49,12 +54,7 @@ function Contact() {
         if (!formIsValid) {
             event.preventDefault();
             return;
-        }
-
-        setName("");
-        setSubject("");
-        setEmail("");
-        setMessage("");
+        }  
     };
 
     return (
@@ -63,7 +63,11 @@ function Contact() {
                 <div className="contact-wrapper">
                     <div className="form-wrapper">
                         <h2>Contact Us</h2>
-                        <form onSubmit={onSubmitHandler}>
+                        <form
+                            onSubmit={onSubmitHandler}
+                            action="https://formsubmit.co/1be99fa807bf4d4478f3551d6ad6e605"
+                            method="POST"
+                        >
                             <div className="row">
                                 <div className="form-group">
                                     <label htmlFor="name">
@@ -74,8 +78,14 @@ function Contact() {
                                         name="name"
                                         id="name"
                                         value={name}
+                                        required={true}
                                         onChange={inputChangeHandler}
                                     />
+                                    {!formInputValidity.name && (
+                                        <p className="error">
+                                            Please provide your name
+                                        </p>
+                                    )}
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="subject">Subject</label>
@@ -88,19 +98,16 @@ function Contact() {
                                     />
                                 </div>
                             </div>
-                            {!formInputValidity.name && (
-                                <p className="error">
-                                    Please provide your name
-                                </p>
-                            )}
+
                             <div className="form-group col">
                                 <label htmlFor="email">
                                     Email<span>*</span>
                                 </label>
                                 <input
-                                    type="text"
+                                    type="email"
                                     name="email"
                                     id="email"
+                                    required={true}
                                     value={email}
                                     onChange={inputChangeHandler}
                                 />
@@ -120,17 +127,34 @@ function Contact() {
                                     name="message"
                                     id="message"
                                     value={message}
+                                    required={true}
                                     onChange={inputChangeHandler}
                                 ></textarea>
+                                {!formInputValidity.message && (
+                                    <p className="error">
+                                        Please provide a message
+                                    </p>
+                                )}
                             </div>
-                            {!formInputValidity.message && (
-                                <p className="error">
-                                    Please provide a message
-                                </p>
-                            )}
-                            <button className="btn btn-primary">
+                            <button type="submit" className="btn btn-primary">
                                 Send Message
                             </button>
+
+                            <input
+                                type="text"
+                                name="_honey"
+                                style={{ display: "none" }}
+                            />
+                            <input
+                                type="hidden"
+                                name="_captcha"
+                                value="false"
+                            ></input>
+                            <input
+                                type="hidden"
+                                name="_subject"
+                                value="New Client Inquiry!"
+                            />
                         </form>
                     </div>
                     <div className="contact-image">
