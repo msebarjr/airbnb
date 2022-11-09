@@ -1,3 +1,4 @@
+import BlurredUpImage from "../BlurredImage";
 import "./card.css";
 
 function Card({ details }) {
@@ -5,7 +6,8 @@ function Card({ details }) {
         <>
             <div className="card">
                 <div className="card-image">
-                    <img src={details.src} alt={details.alt} loading="lazy"/>
+                    {/* <img src={details.src} alt={details.alt} loading="lazy"/> */}
+                    <BlurredUpImage tiny={details.blur} large={details.src} alt={details.alt} />
                 </div>
                 <div className="card-content">
                     <div className="title">

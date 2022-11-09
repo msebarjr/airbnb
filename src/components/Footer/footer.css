@@ -10,12 +10,6 @@ footer {
   padding-bottom: 2rem;
 }
 
-@media screen and (max-width: 800px) {
- footer {
-  
- }
-}
-
 @media screen and (max-width: 500px) {
   .footer-wrapper {
     flex-direction: column;

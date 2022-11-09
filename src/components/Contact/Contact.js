@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 import Home_Night from "../../assets/front_nighttime.jpg";
+import Home_Night_Blur from "../../assets/front_nighttime_blur.jpg";
+import BlurredUpImage from "../BlurredImage";
 
 import "./contact.css";
 
@@ -132,7 +134,12 @@ function Contact() {
                         </form>
                     </div>
                     <div className="contact-image">
-                        <img src={Home_Night} alt="Front of house at night" />
+                        {/* <img src={Home_Night} alt="Front of house at night" /> */}
+                        <BlurredUpImage
+                            tiny={Home_Night_Blur}
+                            large={Home_Night}
+                            alt="Front of the house at night"
+                        />
                     </div>
                 </div>
             </div>
