@@ -2,8 +2,8 @@ import Master from "../assets/bedroom_1_beds.jpg";
 import Master_Blur from "../assets/bedroom_1_beds_blur.jpg";
 import Bathroom from "../assets/master_bathroom.jpg";
 import Bathroom_Blur from "../assets/master_bathroom_blur.jpg";
-import Laundry from "../assets/laundry_room.jpg";
-import Laundry_Blur from "../assets/laundry_room_blur.jpg";
+import Laundry from "../assets/laundry_updated2.jpg";
+import Laundry_Blur from "../assets/laundry_updated_blur.jpg";
 
 export const cardData = [
     {
@@ -13,7 +13,7 @@ export const cardData = [
         blur: Master_Blur,
         alt: " Master Bedroom",
         info: [
-            "Bedroom 1: Queen Bed",
+            "Bedroom 1: King Bed",
             "Bedroom 2: Queen Bed",
             "Bedroom 3: Twin Beds (2)",
         ],

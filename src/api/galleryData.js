@@ -8,7 +8,7 @@ import Applicances from "../assets/kitchen_appliances.jpg";
 import Bar_2 from "../assets/kitchen_bar_2.jpg";
 import Bar from "../assets/kitchen_bar.jpg";
 import Kitchen from "../assets/kitchen.jpg";
-import Laundry from "../assets/laundry_room.jpg";
+import Laundry from "../assets/laundry_updated2.jpg";
 import Living_1 from "../assets/living_room_1.jpg";
 import Living_2 from "../assets/living_room_2.jpg";
 import Master_Bed from "../assets/master_bedroom_2.jpg";

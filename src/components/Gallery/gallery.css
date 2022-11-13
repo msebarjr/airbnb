@@ -48,22 +48,27 @@
 
 .gallery__item--1, .gallery__item--4a {
   grid-area: smallPhoto1;
+  cursor: pointer;
 }
 
 .gallery__item--2, .gallery__item--3a {
   grid-area: smallPhoto2;
+  cursor: pointer;
 }
 
 .gallery__item--3, .gallery__item--2a {
   grid-area: smallPhoto3;
+  cursor: pointer;
 }
 
 .gallery__item--4, .gallery__item--5a {
   grid-area: smallPhoto4;
+  cursor: pointer;
 }
 
 .gallery__item--5, .gallery__item--1a {
   grid-area: largePhoto;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1250px) {
