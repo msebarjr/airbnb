@@ -3,8 +3,9 @@ import Facts from "../components/Facts/Facts";
 import Gallery from "../components/Gallery/Gallery";
 import Hero from "../components/Hero/Hero";
 import Reserve from "../components/Reserve/Reserve";
+import Tour from "../components/Tour/Tour";
 
-function Home() {    
+function Home() {
     return (
         <>
             <div className="container">
@@ -14,6 +15,7 @@ function Home() {
                     <Gallery />
                 </main>
             </div>
+            <Tour />
             <Reserve />
             <div className="container">
                 <Contact />

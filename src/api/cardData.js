@@ -1,5 +1,5 @@
-import Master from "../assets/bedroom_1_beds.jpg";
-import Master_Blur from "../assets/bedroom_1_beds_blur.jpg";
+import Master from "../assets/master_bedroom_2.jpg";
+import Master_Blur from "../assets/master_bedroom_2_blur.jpg";
 import Bathroom from "../assets/master_bathroom.jpg";
 import Bathroom_Blur from "../assets/master_bathroom_blur.jpg";
 import Laundry from "../assets/laundry_updated2.jpg";

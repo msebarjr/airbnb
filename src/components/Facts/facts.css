@@ -24,6 +24,10 @@
   gap: 3rem;
 }
 
+.facts__cards:first-child {  
+  border: 5px solid red;
+}
+
 @media screen and (max-width: 1510px) {
   .facts {
     border: none;

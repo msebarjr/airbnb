@@ -40,7 +40,7 @@ function Hero() {
                         restaurant plazas.
                     </p>
                     <button className="showmore" onClick={openModalHandler}>
-                        <span>Show more</span> >
+                        <span>Show more</span> &gt;
                     </button>
 
                     <div className="hero__actions flex">
@@ -74,17 +74,3 @@ function Hero() {
 }
 
 export default Hero;
-
-// function BlurredUpImage({ tiny, large }) {
-//     const [src, { blur }] = useProgressiveImg(tiny, large);
-
-//     return (
-//         <img
-//             src={src}
-//             style={{
-//                 filter: blur ? "blur(20px)" : "none",
-//                 transition: blur ? "none" : "filter 0.3s ease-out",
-//             }}
-//         />
-//     );
-// }

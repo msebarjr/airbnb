@@ -4,7 +4,7 @@ function Reserve() {
     return (
         <section>
             <div className="reserve">
-                <h2>Reserve Your Stay</h2>
+                <h2>Reserve Your Stay</h2>                
                 <div className="actions flex">
                     <button className="btn btn-primary">
                         <a
