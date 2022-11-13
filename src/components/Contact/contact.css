@@ -265,6 +265,10 @@ input, textarea {
     padding-right: 0;
     text-align: center;   
     width: 400px; 
+    font-size: 2.5rem;  width: max-content;
+    top: -3%;
+    padding: 0 .5em;
+    
   }
 }
 
@@ -272,23 +276,8 @@ input, textarea {
   .contact {
     padding-bottom: 1rem;
   }
-  
-  .contact h2 {
-    font-size: 2.5rem;   
-    width: max-content;
-    top: -3%;
-    padding: 0 .5em;
-  }
 
   .contact .form-wrapper {
     padding-bottom: 3rem;
   }
 }
-/* 
-
-.contact h2 {
-  top : -5%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 450px;
-} */

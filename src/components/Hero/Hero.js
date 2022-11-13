@@ -3,9 +3,16 @@ import "./hero.css";
 import useProgressiveImg from "../../hooks/useProgressiveImg";
 import House from "../../assets/front_daytime.jpg";
 import House_Blur from "../../assets/front_daytime_blur.jpg";
+import { useState } from "react";
+import Modal from "../Modal/Modal";
 
 function Hero() {
     const [src, { blur }] = useProgressiveImg(House_Blur, House);
+    const [openModal, setOpenModal] = useState(true);
+
+    const openModalHandler = () => {
+        setOpenModal((prevState) => !prevState);
+    };
 
     return (
         <section>
@@ -19,7 +26,6 @@ function Hero() {
                         }}
                         alt="Front of house"
                     />
-                    {/* <img src={House} alt="Font of house" loading="lazy" /> */}
                 </div>
                 <div className="hero__content">
                     <h1 className="heading">
@@ -28,10 +34,15 @@ function Hero() {
                         Away from home
                     </h1>
                     <p>
-                        Enjoy this thoroughly updated home with a large in
-                        ground pool for family or friend gatherings looking for
-                        the perfect getaway to south Florida!
+                        This newly updated home features 3 bedrooms, 2
+                        bathrooms, and a private heated pool. This single level
+                        home is located within minutes to many shopping and
+                        restaurant plazas.
                     </p>
+                    <button className="showmore" onClick={openModalHandler}>
+                        <span>Show more</span> >
+                    </button>
+
                     <div className="hero__actions flex">
                         <h3 className="heading">Book Now!</h3>
                         <div className="hero__actions-btns flex">
@@ -57,6 +68,7 @@ function Hero() {
                     </div>
                 </div>
             </div>
+            {openModal && <Modal closeModal={openModalHandler} />}
         </section>
     );
 }
@@ -69,7 +81,7 @@ export default Hero;
 //     return (
 //         <img
 //             src={src}
-//             style={{              
+//             style={{
 //                 filter: blur ? "blur(20px)" : "none",
 //                 transition: blur ? "none" : "filter 0.3s ease-out",
 //             }}
