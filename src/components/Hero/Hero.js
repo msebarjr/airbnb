@@ -8,7 +8,7 @@ import Modal from "../Modal/Modal";
 
 function Hero() {
     const [src, { blur }] = useProgressiveImg(House_Blur, House);
-    const [openModal, setOpenModal] = useState(true);
+    const [openModal, setOpenModal] = useState(false);
 
     const openModalHandler = () => {
         setOpenModal((prevState) => !prevState);
