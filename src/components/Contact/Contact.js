@@ -54,7 +54,7 @@ function Contact() {
         if (!formIsValid) {
             event.preventDefault();
             return;
-        }  
+        }
     };
 
     return (
@@ -65,7 +65,7 @@ function Contact() {
                         <h2>Contact Us</h2>
                         <form
                             onSubmit={onSubmitHandler}
-                            action="https://formsubmit.co/1be99fa807bf4d4478f3551d6ad6e605"
+                            action="https://formsubmit.co/a98bfc0fedf19d4b5aeff1e3fa5728de"
                             method="POST"
                         >
                             <div className="row">

@@ -3,7 +3,7 @@ import Facts from "../components/Facts/Facts";
 import Gallery from "../components/Gallery/Gallery";
 import Hero from "../components/Hero/Hero";
 import Reserve from "../components/Reserve/Reserve";
-import Tour from "../components/Tour/Tour";
+// import Tour from "../components/Tour/Tour";
 
 function Home() {
     return (
@@ -15,7 +15,7 @@ function Home() {
                     <Gallery />
                 </main>
             </div>
-            <Tour />
+            {/* <Tour /> */}
             <Reserve />
             <div className="container">
                 <Contact />
