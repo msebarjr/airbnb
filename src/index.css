@@ -67,7 +67,8 @@ ul {
 }
 
 .btn-secondary {
-  background-color: rgb(154, 154, 154, .5);
+  /* background-color: rgb(154, 154, 154, .5); */
+  background-color: rgba(157, 187, 223, .8); 
 }
 
 .btn:hover {
